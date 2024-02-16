@@ -9,7 +9,7 @@ from django.views import generic
 
 class IndexView(generic.ListView):
     template_name = "polls/index.html"
-    context_object_name = "latest_question_list"
+    context_object_name = "latest_question_list" # sinon par défaut Django cherche "question_list"
 
     def get_queryset(self):
         """Return the last five published questions."""
@@ -20,6 +20,7 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Question
     template_name = "polls/detail.html"
+    # on spécifie avec template_name : sinon Django va chercher par défaut => polls/question_detail.html
 
 
 class ResultsView(generic.DetailView):
