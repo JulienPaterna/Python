@@ -1,0 +1,18 @@
+* {
+    font-size: xx-large;
+    color: rgb(17, 230, 230);
+}
+
+a {
+    color: rgb(23, 178, 47);
+    text-decoration: none;
+}
+
+body {
+    background: white url("images/background.png") no-repeat;
+    background-size: cover;
+}
+
+input {
+    background-color: rgb(21, 97, 138);
+}
