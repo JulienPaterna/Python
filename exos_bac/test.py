@@ -20,7 +20,7 @@ L = [[0 for i in range(4)] for i in range(6)]
 tab1 = [4, 0, 1, 3]
 tab2 = [4, 5, 6, 7]
 # print(tab1 + tab2)
-print(tab2[2:])
+# print(tab2[2:])
 # print(tab2[1:3])
 # print(tab2[:4])
 
@@ -77,3 +77,11 @@ animaux = [ {'nom':'Medor', 'espece':'chien', 'age':5, 'enclos':2},
  {'nom':'Belle', 'espece':'chien', 'age':6, 'enclos':3},
  {'nom':'Mirza', 'espece':'chat', 'age':6, 'enclos':5}]
 # print(animaux[0]['nom'])
+
+a = {}
+a['salut'] = 'hello'
+# print(a)
+
+tab = []
+tab.append(1)
+print(tab)
