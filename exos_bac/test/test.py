@@ -84,4 +84,21 @@ a['salut'] = 'hello'
 
 tab = []
 tab.append(1)
-print(tab)
+# print(tab)
+
+#argecho.py
+# import sys
+# test = sys.argv[1]
+
+# print(test)
+# for arg in sys.argv: 
+#     print(arg)
+
+# try:
+#   with open("text.tx", 'r') as fichier:
+#     fichier = fichier.read()
+#     print(fichier)
+# except:
+#   print("Files doesn't exist")
+
+
