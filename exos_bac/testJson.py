@@ -9,10 +9,11 @@ with open("test/fichier.json") as f:
     data = json.load(f)
 
 
-if data['prenom'] == 'Julien':
-    print("coucou chérie")
-else:
-    print("au revoir")
+for elem in data:
+    if elem['prenom'] == 'Anne':
+        print("coucou chérie")
+    else:
+        print("au revoir")
 
 
 
