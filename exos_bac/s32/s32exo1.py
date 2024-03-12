@@ -10,9 +10,9 @@ def min_et_max(tab):
 
 
 
-print(min_et_max([0, 1, 4, 2, -2, 9, 3, 1, 7, 1, 10]))
+print(min_et_max([0, 1, 4, 2, -2, 9, 3, 1, 7, 1]))
 #{'min': -2, 'max': 9}
-print(min_et_max([0, 1, 2, 3, 11, -4]))
+print(min_et_max([0, 1, 2, 3]))
 #{'min': 0, 'max': 3}
 print(min_et_max([3]))
 #{'min': 3, 'max': 3}

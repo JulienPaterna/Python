@@ -102,3 +102,15 @@ tab.append(1)
 #   print("Files doesn't exist")
 
 
+map = {}
+keys = ['a', 'b', 'c', 'a', 'a', 'c']
+
+for letter in keys:
+    try: 
+        value = map[letter]
+        value += 1
+        map.update({letter: value})
+    except:
+        map.update({letter: 1})
+# map.update({'a': 1})
+print(map)
