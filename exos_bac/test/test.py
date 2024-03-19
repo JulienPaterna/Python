@@ -113,4 +113,12 @@ for letter in keys:
     except:
         map.update({letter: 1})
 # map.update({'a': 1})
-print(map)
+# print(map)
+
+n = 3
+liste = [['O']*n]*n
+# print(liste)
+
+result = []
+result.extend((1, 2))
+print(result)
