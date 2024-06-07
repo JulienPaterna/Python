@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+	
+{% block content %}
+
+<h2>Delete Post</h2>
+
+<form method="POST">
+  {% csrf_token %} {% comment %} gère le CSRF => évite les attaques par injection {% endcomment %}
+  <p>Êtes-vous sûr de vouloir supprimer le post "{{post.title}}"?</p>
+  <div>
+    <button type="submit">Oui, supprimer</button>
+  </div>
+</form>
+<a href="{% url 'posts' %}"><button>Abandonner</button></a>
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+	
+{% block content %}
+
+<h2>Login</h2>
+<form method="post" novalidate> {% comment %} novalidate => enlève la validation des champs du browser => si champs obligatoires vides = erreur {% endcomment %}
+	{% csrf_token %}
+	{{ form.as_p }} 
+	<input type="submit" value="Login" />
+</form>
+<p>
+	Don't have an account? <a href="{%url 'register'%}"><button>Register</button></a>
+</p>
+{% endblock content %}

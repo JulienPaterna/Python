@@ -1,0 +1,32 @@
+{% extends 'base.html' %}	
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container" style="width:80%">
+        <h1 class="text-center mt-3 mb-3 fw-bold text-white">{% if id %}Edit {% else %}New {% endif %}Disc</h1>
+        <form method="post">
+            {% csrf_token %}
+            {% comment %} {{ form.as_p }} {% endcomment %}
+            {{form|crispy}}
+            {% comment %} <div>
+                <label class="col-form-label col-form-label-lg mt-4 fw-bold text-white" for="Title">Title</label>
+                <input class="form-control form-control-lg" type="text" name="Title" maxlength="120" id="Title">
+            </div>
+            <div>
+                <label class="col-form-label col-form-label-lg mt-4 fw-bold text-white" for="Artist">Artist</label>
+                <input class="form-control form-control-lg" type="text" name="Artist" maxlength="120" id="Artist">
+            </div>
+            <div>
+                <label class="col-form-label col-form-label-lg mt-4 fw-bold text-white" for="Release_Year">Release_Year</label>
+                <input class="form-control form-control-lg" type="number" name="Release_Year" id="Release_Year">
+            </div>
+            <div>
+                <label class="col-form-label col-form-label-lg mt-4 fw-bold text-white" for="Format">Format</label>
+                <input class="form-control form-control-lg" type="text" name="Format" maxlength="120" id="Format">
+            </div>
+            <input type="submit" value="Save" class="btn btn-light mt-3"/> {% endcomment %}
+        </form>
+        <p class="mt-3">
+            <a href="{% url 'discography' %}"><button type="button" class="btn btn-primary">Back to discography</button></a>
+        </p>
+    </div>
+{% endblock content %}
