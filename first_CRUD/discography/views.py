@@ -7,6 +7,11 @@ def home(request):
     context = {'discs': discs}
     return render(request, 'discography/home.html', context)
 
+def show_disc(request, id):
+    disc = get_object_or_404(Disc, pk=id)
+    context = {'disc': disc}
+    return render(request, 'discography/disc.html', context)
+
 def create_disc(request):
     if request.method == 'GET':
         context = {'form': DiscForm()}
@@ -30,7 +35,7 @@ def edit_disc(request, id):
         form = DiscForm(request.POST, instance=disc)
         if form.is_valid():
             form.save()
-            return redirect('discography')
+            return redirect(f'/disc/show/{id}')
         else:
             return render(request,'discography/disc_form.html',{'form':form})
         

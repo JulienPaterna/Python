@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Disc(models.Model):
+    Picture = models.CharField(max_length=120)
     Title = models.CharField(max_length=120)
     Artist = models.CharField(max_length=120)
     Release_Year = models.IntegerField()

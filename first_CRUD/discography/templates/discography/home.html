@@ -1,20 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container" style="width:80%">
-    <h1 class="text-center mt-3 mb-3 fw-bold text-white">Essential’90s Alternative Albums</h1>
+<div class="container" style="width:60%">
+    <h1 class="text-center mt-5 mb-3 fw-bold text-white">Essential’90s Alternative Albums</h1>
     <a href="{% url 'disc-create' %}"><button type="button" class="btn btn-light mb-3">Add Disc</button></a>
     {% for disc in discs %}
         <div class="card text-white bg-secondary mb-3 position-relative">
             <h3 class="card-header">{{ disc.Title }}</h3>
             <div class="card-body">
               <h5 class="card-title">Artist : {{ disc.Artist}}</h5>
-              <h6 class="card-text">Realised on {{ disc.Release_Year }}</h6>
-              <h6 class="card-text">Format : {{ disc.Format }}</h6>
+              {% comment %} <h6 class="card-text">Realised on {{ disc.Release_Year }}</h6>
+              <h6 class="card-text">Format : {{ disc.Format }}</h6> {% endcomment %}
             </div>
-            <p class="position-absolute bottom-0 end-0 me-3">
+            <p class="position-absolute bottom-5 end-0 me-3">
+                <a href="{% url 'show-disc' disc.id %}"><button type="button" class="btn btn-primary">Show disc</button></a>
+            </p>
+            {% comment %} <p class="position-absolute bottom-0 end-0 me-3">
                 <a href="{% url 'disc-edit' disc.id %}"><button type="button" class="btn btn-primary">Edit</button></a>
                 <a href="{% url 'disc-delete' disc.id %}"><button type="button" class="btn btn-danger">Delete</button></a>
-            </p>
+            </p> {% endcomment %}
         </div>
 	{% endfor %}
 </div>
