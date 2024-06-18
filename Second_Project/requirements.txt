@@ -133,7 +133,7 @@ ubuntu-drivers-common==0.0.0
 ufw==0.36.1
 ujson==5.9.0
 unattended-upgrades==0.1
-urllib3==1.26.5
+urllib3==1.26.19
 usb-creator==0.3.7
 uvicorn==0.18.2
 uvloop==0.19.0
