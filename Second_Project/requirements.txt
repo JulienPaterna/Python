@@ -20,7 +20,7 @@ chlore==0.13.12
 click==8.0.3
 colorama==0.4.4
 command-not-found==0.3
-cryptography==38.0.4
+cryptography==43.0.1
 cssselect2==0.7.0
 cupshelpers==1.0
 dateparser==1.2.0
